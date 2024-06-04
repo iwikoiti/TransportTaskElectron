@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* body {
+    font-family: "ClassicRobotItalic", sans-serif;
+  } */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  @font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Nunito"),
+      url("./fonts/Nunito/static/Nunito-Regular.ttf") format("ttf");
+  }
+}

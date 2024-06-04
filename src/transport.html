@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>TransportDesktop</title>
+  </head>
+
+  <body
+    class="h-screen container flex bg-zinc-900 place-content-between gap-x-5"
+  >
+    <div
+      class="flex flex-col justify-around border-2 rounded border-dashed border-zinc-700"
+    >
+      <div class="w-full h-full max-w-56 flex flex-col">
+        <input
+          class="bg-zinc-700 text-white border-2 rounded border-dashed border-zinc-700 px-5 py-2 m-3 font-semibold"
+          id="N"
+          placeholder="Введите N..."
+        />
+        <input
+          class="bg-zinc-700 text-white border-2 rounded border-dashed border-zinc-700 px-5 py-2 m-3 font-semibold"
+          id="M"
+          placeholder="Введите M..."
+        />
+        <button
+          class="text-emerald-500 border-2 rounded border-dashed border-zinc-700 px-5 py-2 m-3 font-semibold bg-zinc-800 hover:bg-zinc-700"
+          id="example1"
+        >
+          Пример №1
+        </button>
+        <button
+          class="text-emerald-500 border-2 rounded border-dashed border-zinc-700 px-5 py-2 m-3 font-semibold bg-zinc-800 hover:bg-zinc-700"
+          id="example2"
+        >
+          Пример №2
+        </button>
+        <button
+          class="text-emerald-500 border-2 rounded border-dashed border-zinc-700 px-5 py-2 m-3 font-semibold bg-zinc-800 hover:bg-zinc-700"
+          id="example3"
+        >
+          Пример №3
+        </button>
+        <button
+          class="text-emerald-500 border-2 rounded border-dashed border-zinc-700 px-5 py-2 m-3 font-semibold bg-zinc-800 hover:bg-zinc-700"
+          id="createTableButton"
+        >
+          Ввести значения
+        </button>
+        <button
+          class="text-emerald-500 border-2 rounded border-dashed border-zinc-700 px-5 py-2 m-3 font-semibold bg-zinc-800 hover:bg-zinc-700"
+          id="nextStep"
+        >
+          Следующий шаг
+        </button>
+      </div>
+      <div>
+        <a href="./index.html">
+          <button
+            class="text-white border-2 rounded border-dashed border-zinc-700 px-5 py-2 m-3 font-semibold bg-zinc-800 hover:bg-zinc-700"
+          >
+            Выйти
+          </button>
+        </a>
+      </div>
+    </div>
+    <div
+      class="w-full h-full flex flex-col items-center justify-center border-2 rounded border-dashed border-zinc-700"
+    >
+      <table class="text-emerald-500 m-5 w-8 h-8" id="createTable"></table>
+      <div class="flex flex-row">
+        <table class="text-amber-200 m-5" id="drawTable"></table>
+        <div id="solutionF"></div>
+      </div>
+    </div>
+    <script src="../renderer.js"></script>
+    <script src="./scripts/createTable.js"></script>
+  </body>
+</html>
